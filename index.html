@@ -4,7 +4,7 @@
   <style>
     /* CSS for the navigation bar */
     nav {
-      background-color: transparent; /* Make the navigation bar transparent */
+      background-color: rgba(50, 50, 50, 0.8); /* Semi-transparent gray background */
       overflow: hidden;
     }
 
@@ -37,6 +37,10 @@
       overflow: hidden;
       background-color: black; /* Use black background */
       color: white; /* Make text white */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
     /* Style for the falling elements */
@@ -57,6 +61,14 @@
         transform: translateY(100vh) rotate(360deg);
       }
     }
+
+    /* Style for the profile picture */
+    img {
+      border-radius: 50%; /* Make it a circle */
+      width: 200px; /* Set desired width */
+      height: 200px; /* Set desired height */
+      object-fit: cover; /* Maintain aspect ratio */
+    }
   </style>
 </head>
 <body>
@@ -69,22 +81,9 @@
   </ul>
 </nav>
 
-<h1>Artickatz</h1>
-<img src="profile pic.png" alt="Artickatz's Picture">
-<p>I'm hosted with GitHub Pages.</p>
-
-<script>
-  // JavaScript to continuously generate falling elements
-  setInterval(function() {
-    var element = document.createElement("div");
-    element.classList.add("falling");
-    element.style.left = Math.random() * window.innerWidth + "px";
-    document.body.appendChild(element);
-    setTimeout(function() {
-      element.remove();
-    }, 4000); // Remove falling elements after 4 seconds
-  }, 100); // Generate a falling element every 100 milliseconds
-</script>
+<div>
+  <img src="profile pic.png" alt="Artickatz's Picture">
+</div>
 
 </body>
 </html>
