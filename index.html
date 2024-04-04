@@ -4,18 +4,25 @@
   <style>
     /* CSS for the navigation bar */
     nav {
+      position: fixed; /* Fixed position */
+      top: 0; /* Align to the top of the page */
+      width: 100%; /* Full width */
       background-color: rgba(50, 50, 50, 0.8); /* Semi-transparent gray background */
       overflow: hidden;
+      z-index: 999; /* Ensure it's above other content */
     }
 
     nav ul {
       list-style-type: none;
       margin: 0;
       padding: 0;
+      display: flex; /* Use flexbox for horizontal alignment */
+      justify-content: center; /* Center the navigation items horizontally */
     }
 
     nav ul li {
-      float: left;
+      /* float: left; */ /* No longer needed */
+      margin: 0 10px; /* Add spacing between navigation items */
     }
 
     nav ul li a {
@@ -38,6 +45,7 @@
       background-color: black; /* Use black background */
       color: white; /* Make text white */
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
@@ -69,6 +77,15 @@
       height: 200px; /* Set desired height */
       object-fit: cover; /* Maintain aspect ratio */
     }
+
+    /* Style for the about me section */
+    .about-me {
+      text-align: center;
+      margin-top: 20px; /* Adjust spacing as needed */
+      max-width: 600px; /* Set maximum width */
+      padding: 20px; /* Add padding */
+      border: 1px solid white; /* Add border */
+    }
   </style>
 </head>
 <body>
@@ -83,6 +100,11 @@
 
 <div>
   <img src="profile pic.png" alt="Artickatz's Picture">
+</div>
+
+<div class="about-me">
+  <h2>About Me</h2>
+  <p>Insert your about me content here.</p>
 </div>
 
 </body>
