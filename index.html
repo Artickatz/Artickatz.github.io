@@ -68,24 +68,29 @@
 
     /* Style for the about me section */
     .about-me {
-      text-align: center;
+      text-align: left;
       margin-top: 20px; /* Adjust spacing as needed */
       max-width: 600px; /* Set maximum width */
       padding: 20px; /* Add padding */
+      font-family: monospace; /* Use monospace font */
+      background-color: #222; /* Dark background color */
+      border-radius: 10px; /* Rounded corners */
+      border: 2px solid #149414; /* Green border */
     }
-    
-    /* Style for the photo container */
-    .photo-container {
-      display: flex;
-      justify-content: space-between;
-      width: 80%; /* Adjust width as needed */
-      margin-top: 20px; /* Adjust spacing as needed */
+
+    /* Style for the prompt */
+    .prompt {
+      color: #149414; /* Green color for the prompt */
     }
-    
-    /* Style for the individual photos */
-    .photo-container img {
-      width: calc(16.666% - 10px); /* 6 photos with space in between */
-      border-radius: 10px; /* Add border radius */
+
+    /* Style for the command */
+    .command {
+      color: white; /* White color for the command */
+    }
+
+    /* Style for the output */
+    .output {
+      color: #ccc; /* Light gray color for the output */
     }
   </style>
 </head>
@@ -106,10 +111,10 @@
 </div>
 
 <div class="about-me">
-  <h2>Hey, I'm Kyle!</h2>
-  <p>
-    I'm an undergrad with a keen interest in cybersecurity and ethical hacking. I'm passionate about learning more in these fields and exploring the endless possibilities they offer.
-  </p>
+  <h2>$ Whoami</h2>
+  <p><span class="prompt">$</span> <span class="command">Kyle</span></p>
+  <p><span class="prompt">$</span> <span class="command">Undergrad at Capitol Technology University</span></p>
+  <p><span class="prompt">$</span> <span class="command">Interested in cybersecurity and ethical hacking</span></p>
 </div>
 
 </body>
