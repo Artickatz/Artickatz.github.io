@@ -20,7 +20,7 @@
 
     nav ul li a {
       display: block;
-      color: white;
+      color: white; /* Make text white */
       text-align: center;
       padding: 14px 16px;
       text-decoration: none;
@@ -31,9 +31,31 @@
       color: black;
     }
 
-    /* CSS for the gray background */
+    /* CSS for the black background */
     body {
-      background-color: #f2f2f2; /* Use gray background */
+      margin: 0;
+      overflow: hidden;
+      background-color: black; /* Use black background */
+      color: white; /* Make text white */
+    }
+
+    /* Style for the falling elements */
+    .falling {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background-color: #000;
+      animation: fallingAnimation linear infinite;
+    }
+
+    /* Animation for the falling effect */
+    @keyframes fallingAnimation {
+      from {
+        transform: translateY(-100px) rotate(0deg);
+      }
+      to {
+        transform: translateY(100vh) rotate(360deg);
+      }
     }
   </style>
 </head>
@@ -50,6 +72,19 @@
 <h1>Artickatz</h1>
 <img src="profile pic.png" alt="Artickatz's Picture">
 <p>I'm hosted with GitHub Pages.</p>
+
+<script>
+  // JavaScript to continuously generate falling elements
+  setInterval(function() {
+    var element = document.createElement("div");
+    element.classList.add("falling");
+    element.style.left = Math.random() * window.innerWidth + "px";
+    document.body.appendChild(element);
+    setTimeout(function() {
+      element.remove();
+    }, 4000); // Remove falling elements after 4 seconds
+  }, 100); // Generate a falling element every 100 milliseconds
+</script>
 
 </body>
 </html>
