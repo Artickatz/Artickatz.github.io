@@ -74,6 +74,25 @@
       font-family: monospace; /* Use monospace font */
     }
 
+    /* Style for the blinking cursor */
+    .blinking-cursor {
+      animation: blink 1s infinite; /* Blinking animation */
+      color: white; /* White color */
+    }
+
+    /* Keyframes for the blinking animation */
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
     /* Style for the about me section */
     .about-me {
       text-align: center;
@@ -100,7 +119,7 @@
 </div>
 
 <div class="whoami">
-  <h2>$ Whoami</h2>
+  <h2>$ Whoami<span class="blinking-cursor">|</span></h2>
   
 </div>
 
