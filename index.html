@@ -43,16 +43,13 @@
     body {
       margin: 0;
       overflow: hidden;
-      background-color: #111; /* Use black background */
-      color: #411; /* Dark red color */
-      font-family: Consolas, Courier, monospace; /* Consolas font */
-      font-size: 16px; /* Restore original font size */
-      text-shadow: 0 0 15px #411; /* Text shadow */
-      height: 100%;
-    }
-
-    div.container {
-      text-align: center;
+      background-color: black; /* Use black background */
+      color: #149414; /* Hacker green color */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
     }
 
     /* Style for the profile picture */
@@ -63,7 +60,6 @@
       object-fit: cover; /* Maintain aspect ratio */
       transition: transform 0.3s ease; /* Add transition */
       margin-top: 50px; /* Add margin to the top */
-      margin-bottom: 20px; /* Add margin to the bottom */
       border: 2px solid white; /* Add white border */
     }
 
@@ -82,8 +78,7 @@
     /* Style for the blinking cursor */
     .blinking-cursor {
       animation: blink 1s infinite; /* Blinking animation */
-      color: #f00; /* Red color */
-      text-shadow: 0px 0px 10px #f00; /* Red text shadow */
+      color: rgba(20, 148, 20, 1); /* Hacker green color */
     }
 
     /* Keyframes for the blinking animation */
@@ -105,7 +100,6 @@
       margin-top: 20px; /* Adjust spacing as needed */
       max-width: 600px; /* Set maximum width */
       font-family: Arial, sans-serif; /* Use Arial or sans-serif font */
-      margin-bottom: 50px; /* Add margin to the bottom */
     }
   </style>
 </head>
@@ -121,7 +115,7 @@
   </ul>
 </nav>
 
-<div class="container">
+<div>
   <img src="profile pic.png" alt="Artickatz's Picture">
 </div>
 
