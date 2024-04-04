@@ -57,8 +57,8 @@
       width: 200px; /* Set desired width */
       height: 200px; /* Set desired height */
       object-fit: cover; /* Maintain aspect ratio */
-      border: 2px solid white; /* Add border */
       transition: transform 0.3s ease; /* Add transition */
+      margin-top: 50px; /* Add margin to the top */
     }
 
     /* Scale up the image when hovered */
@@ -66,31 +66,19 @@
       transform: scale(1.1);
     }
 
+    /* Style for the $ Whoami section */
+    .whoami {
+      text-align: center;
+      margin-top: 20px; /* Adjust spacing as needed */
+      font-family: monospace; /* Use monospace font */
+    }
+
     /* Style for the about me section */
     .about-me {
-      text-align: left;
+      text-align: center;
       margin-top: 20px; /* Adjust spacing as needed */
       max-width: 600px; /* Set maximum width */
-      padding: 20px; /* Add padding */
-      font-family: monospace; /* Use monospace font */
-      background-color: #222; /* Dark background color */
-      border-radius: 10px; /* Rounded corners */
-      border: 2px solid #149414; /* Green border */
-    }
-
-    /* Style for the prompt */
-    .prompt {
-      color: #149414; /* Green color for the prompt */
-    }
-
-    /* Style for the command */
-    .command {
-      color: white; /* White color for the command */
-    }
-
-    /* Style for the output */
-    .output {
-      color: #ccc; /* Light gray color for the output */
+      font-family: Arial, sans-serif; /* Use Arial or sans-serif font */
     }
   </style>
 </head>
@@ -110,11 +98,13 @@
   <img src="profile pic.png" alt="Artickatz's Picture">
 </div>
 
-<div class="about-me">
+<div class="whoami">
   <h2>$ Whoami</h2>
-  <p><span class="prompt">$</span> <span class="command">Kyle</span></p>
-  <p><span class="prompt">$</span> <span class="command">Undergrad at Capitol Technology University</span></p>
-  <p><span class="prompt">$</span> <span class="command">Interested in cybersecurity and ethical hacking</span></p>
+  <p>Kyle</p>
+</div>
+
+<div class="about-me">
+  <p>I'm an undergraduate student with a passion for cybersecurity and ethical hacking. Currently, I'm exploring various aspects of these fields to expand my knowledge and skills.</p>
 </div>
 
 </body>
