@@ -95,17 +95,17 @@
     
     /* Style for the photo container */
     .photo-container {
-      display: flex;
-      flex-wrap: wrap; /* Allow images to wrap to the next line */
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Three columns */
+      grid-gap: 10px; /* Gap between grid items */
       width: 80%; /* Adjust width as needed */
       margin-top: 20px; /* Adjust spacing as needed */
     }
     
     /* Style for the individual photos */
     .photo-container img {
-      width: calc(33.333% - 10px); /* 3 photos in a row with space in between */
-      margin: 5px; /* Add margin between images */
+      max-width: 100%; /* Ensure images don't exceed container width */
+      height: auto; /* Maintain aspect ratio */
       border-radius: 10px; /* Add border radius */
     }
   </style>
