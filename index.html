@@ -48,7 +48,6 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
     }
 
     /* Style for the falling elements */
@@ -104,8 +103,9 @@
     
     /* Style for the individual photos */
     .photo-container img {
-      max-width: 100%; /* Ensure images don't exceed container width */
-      height: auto; /* Maintain aspect ratio */
+      width: 100%; /* Ensure images fill grid cells */
+      height: 200px; /* Set fixed height for all images */
+      object-fit: cover; /* Maintain aspect ratio and fit within dimensions */
       border-radius: 10px; /* Add border radius */
     }
   </style>
@@ -137,6 +137,8 @@
   <img class="profile-pic" src="ists_2024.jpg" alt="Photo 5">
   <img class="profile-pic" src="1701811723510.jpg" alt="Photo 6">
 </div>
+
+<!-- Add more content -->
 
 </body>
 </html>
