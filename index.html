@@ -71,12 +71,18 @@
     }
 
     /* Style for the profile picture */
-    img {
+    img.profile-pic {
       border-radius: 50%; /* Make it a circle */
       width: 200px; /* Set desired width */
       height: 200px; /* Set desired height */
       object-fit: cover; /* Maintain aspect ratio */
       border: 2px solid white; /* Add border */
+      transition: transform 0.3s ease; /* Add transition */
+    }
+
+    /* Scale up the image when hovered */
+    img.profile-pic:hover {
+      transform: scale(1.1);
     }
 
     /* Style for the about me section */
@@ -90,14 +96,16 @@
     /* Style for the photo container */
     .photo-container {
       display: flex;
-      justify-content: space-between;
+      flex-wrap: wrap; /* Allow images to wrap to the next line */
+      justify-content: center;
       width: 80%; /* Adjust width as needed */
       margin-top: 20px; /* Adjust spacing as needed */
     }
     
     /* Style for the individual photos */
     .photo-container img {
-      width: calc(16.666% - 10px); /* 6 photos with space in between */
+      width: calc(33.333% - 10px); /* 3 photos in a row with space in between */
+      margin: 5px; /* Add margin between images */
       border-radius: 10px; /* Add border radius */
     }
   </style>
@@ -113,21 +121,21 @@
 </nav>
 
 <div>
-  <img src="profile pic.png" alt="Artickatz's Picture">
+  <img class="profile-pic" src="profile pic.png" alt="Artickatz's Picture">
 </div>
 
 <div class="about-me">
   <h2>About Me</h2>
-  <p>Hello I am Artickatz and this is my epic site. Some stuf about me is </p>
+  <p>Insert your about me content here.</p>
 </div>
 
 <div class="photo-container">
-  <img src="profile pic.png" alt="Photo 1">
-  <img src="profile pic.png" alt="Photo 2">
-  <img src="profile pic.png" alt="Photo 3">
-  <img src="profile pic.png" alt="Photo 4">
-  <img src="profile pic.png" alt="Photo 5">
-  <img src="profile pic.png" alt="Photo 6">
+  <img class="profile-pic" src="profile pic.png" alt="Photo 1">
+  <img class="profile-pic" src="profile pic.png" alt="Photo 2">
+  <img class="profile-pic" src="profile pic.png" alt="Photo 3">
+  <img class="profile-pic" src="profile pic.png" alt="Photo 4">
+  <img class="profile-pic" src="profile pic.png" alt="Photo 5">
+  <img class="profile-pic" src="profile pic.png" alt="Photo 6">
 </div>
 
 </body>
